@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.title }} — myShop{% endblock %}
+
+{% block content %}
+    <div class="detail">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        {% else %}
+            <div class="no-cover">Нет фото</div>
+        {% endif %}
+
+        <div class="detail-info">
+            <h1>{{ product.title }}</h1>
+            <div class="muted">{{ product.brand }}</div>
+
+            <table class="info">
+                <tr><td>Категория</td><td><span class="badge">{{ product.get_category_display }}</span></td></tr>
+                <tr><td>Цена</td><td class="price">{{ product.price }} сом</td></tr>
+                <tr><td>В наличии</td><td>{{ product.quantity }} шт.</td></tr>
+                <tr><td>Серийный номер</td><td>{% if serial %}<code>{{ serial.number }}</code>{% else %}<span class="muted">не указан</span>{% endif %}</td></tr>
+                {% if serial %}<tr><td>Гарантия</td><td>{{ serial.warranty_months }} мес.</td></tr>{% endif %}
+                <tr><td>Добавлен</td><td>{{ product.created_at|date:"d.m.Y" }}</td></tr>
+            </table>
+
+            <h3>Описание</h3>
+            <p>{{ product.description|default:"Описание отсутствует."|linebreaksbr }}</p>
+
+            <a href="{% url 'product_list' %}" class="btn">← Назад к товарам</a>
+        </div>
+    </div>
+
+    <h2 style="margin-top:32px">Отзывы ({{ comments|length }})</h2>
+    {% for comment in comments %}
+        <div class="empty" style="margin-bottom:12px">
+            <b>{{ comment.author }}</b>
+            <span class="price">{{ comment.get_rating_display }}</span>
+            <span class="muted">· {{ comment.created_at|date:"d.m.Y" }}</span>
+            <p style="margin:8px 0 0">{{ comment.text|linebreaksbr }}</p>
+        </div>
+    {% empty %}
+        <div class="empty">Отзывов пока нет.</div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,246 @@
+[
+  {
+    "model": "myShop.product",
+    "pk": 1,
+    "fields": {
+      "title": "iPhone 16",
+      "brand": "Apple",
+      "description": "Смартфон с чипом A18, 128 ГБ, камера 48 Мп.",
+      "category": "phones",
+      "price": "89990.00",
+      "quantity": 7,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "number": "F2LXK9P1Q7",
+      "warranty_months": 24
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 2,
+    "fields": {
+      "title": "Galaxy S25",
+      "brand": "Samsung",
+      "description": "Флагман с AMOLED-экраном 6,2\" и 256 ГБ памяти.",
+      "category": "phones",
+      "price": "79990.00",
+      "quantity": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "number": "R5CX20A1B2",
+      "warranty_months": 12
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 3,
+    "fields": {
+      "title": "MacBook Air 13 M3",
+      "brand": "Apple",
+      "description": "Лёгкий ноутбук, 16 ГБ ОЗУ, 512 ГБ SSD.",
+      "category": "laptops",
+      "price": "124990.00",
+      "quantity": 3,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "number": "C02HG7XQ1PF",
+      "warranty_months": 24
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 4,
+    "fields": {
+      "title": "IdeaPad Slim 5",
+      "brand": "Lenovo",
+      "description": "Ноутбук для учёбы: Ryzen 7, 16 ГБ, 512 ГБ.",
+      "category": "laptops",
+      "price": "64990.00",
+      "quantity": 4,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 4,
+    "fields": {
+      "product": 4,
+      "number": "PF4KZ8M2",
+      "warranty_months": 12
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 5,
+    "fields": {
+      "title": "WH-1000XM5",
+      "brand": "Sony",
+      "description": "Беспроводные наушники с шумоподавлением.",
+      "category": "audio",
+      "price": "32990.00",
+      "quantity": 10,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 5,
+    "fields": {
+      "product": 5,
+      "number": "S01-5523981",
+      "warranty_months": 12
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 6,
+    "fields": {
+      "title": "AirPods Pro 2",
+      "brand": "Apple",
+      "description": "Наушники с активным шумоподавлением и USB-C.",
+      "category": "audio",
+      "price": "21990.00",
+      "quantity": 0,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 6,
+    "fields": {
+      "product": 6,
+      "number": "GX7PQ2M9K1",
+      "warranty_months": 24
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 7,
+    "fields": {
+      "title": "Smart TV 55\" QLED",
+      "brand": "Xiaomi",
+      "description": "Телевизор 4K, Google TV, 120 Гц.",
+      "category": "tv",
+      "price": "45990.00",
+      "quantity": 2,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.serialnumber",
+    "pk": 7,
+    "fields": {
+      "product": 7,
+      "number": "XMTV55Q0001",
+      "warranty_months": 12
+    }
+  },
+  {
+    "model": "myShop.product",
+    "pk": 8,
+    "fields": {
+      "title": "Power Bank 20000 mAh",
+      "brand": "Anker",
+      "description": "Внешний аккумулятор с быстрой зарядкой 30 Вт.",
+      "category": "accessories",
+      "price": "3490.00",
+      "quantity": 25,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "author": "Айбек",
+      "text": "Камера отличная, батарея держит день.",
+      "rating": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "author": "Мээрим",
+      "text": "Дороговато, но качество на уровне.",
+      "rating": 4,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "author": "Нурсултан",
+      "text": "Для учёбы и программирования — идеально.",
+      "rating": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 4,
+    "fields": {
+      "product": 5,
+      "author": "Алина",
+      "text": "Шумоподавление супер, удобно сидят.",
+      "rating": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 5,
+    "fields": {
+      "product": 5,
+      "author": "Тимур",
+      "text": "Звук хороший, но кейс большой.",
+      "rating": 4,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 6,
+    "fields": {
+      "product": 7,
+      "author": "Эрлан",
+      "text": "Картинка яркая, пульт удобный.",
+      "rating": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "myShop.productcomment",
+    "pk": 7,
+    "fields": {
+      "product": 8,
+      "author": "Айгерим",
+      "text": "Заряжает телефон 4 раза.",
+      "rating": 5,
+      "created_at": "2026-11-07T12:00:00Z"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Товары — myShop{% endblock %}
+
+{% block content %}
+    <h1>Товары</h1>
+
+    {% if products %}
+        <div class="grid">
+            {% for product in products %}
+                <a href="{% url 'product_detail' product.id %}" class="card">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.title }}">
+                    {% else %}
+                        <div class="no-cover">Нет фото</div>
+                    {% endif %}
+                    <div class="card-body">
+                        <h3>{{ product.title }}</h3>
+                        <div class="muted">{{ product.brand }}</div>
+                        <span class="badge">{{ product.get_category_display }}</span>
+                        <div class="price">{{ product.price }} сом</div>
+                        <div class="muted">
+                            {% if product.quantity %}В наличии: {{ product.quantity }} шт.{% else %}Нет в наличии{% endif %}
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty">Товаров пока нет. Добавьте их через <a href="/admin/">админ-панель</a>.</div>
+    {% endif %}
+{% endblock %}
